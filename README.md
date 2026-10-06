@@ -1,2 +1,2 @@
 # GPR
-un proyecto gestionado por monguers
+un proyecto gestionado por científicos de datos.
