@@ -1,2 +1,2 @@
-# GPR_monguers
+# GPR
 un proyecto gestionado por monguers
