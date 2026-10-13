@@ -1,0 +1,291 @@
+﻿AÑO;CAPITULO;DESCRIPCION_CAPITULO;CONCEPTO;DESCRIPCION_CONCEPTO;PRESUPUESTO_INICIAL_EUR;MODIFICACIONES_CREDITO_EUR;PRESUPUESTO_DEFINITIVO_EUR;GASTO_COMPROMETIDO_EUR;OBLIGACIONES_RECONOCIDAS_NETAS_EUR;REMANENTES_CREDITO_EUR;PAGOS_EJERCICIO_CORRIENTE_EUR;OBLIGACIONES_PENDIENTES_PAGO_EUR
+2015;1;Gastos de personal;100;Dotación financiera;0,00;1893291,93;1893291,93;0,00;0,00;1893291,93;0,00;0,00
+2015;1;Gastos de personal;110;Dotación Financiera;153282416,32;-204890,64;153077525,68;0,00;0,00;153077525,68;0,00;0,00
+2015;1;Gastos de personal;113;Funcionarios;0,00;0,00;0,00;132856194,00;132856194,00;-132856194,00;132856194,00;0,00
+2015;1;Gastos de personal;114;Laboral fijo;0,00;0,00;0,00;13501989,01;13501989,01;-13501989,01;13501989,01;0,00
+2015;1;Gastos de personal;115;Contrataciones Temporales;0,00;0,00;0,00;6138764,14;6138764,14;-6138764,14;6138764,14;0,00
+2015;1;Gastos de personal;120;Dotación Financiera;19234037,66;-125810,06;19108227,60;0,00;0,00;19108227,60;0,00;0,00
+2015;1;Gastos de personal;121;Seguridad Social;0,00;0,00;0,00;18839945,16;18839945,16;-18839945,16;13636745,04;5203200,12
+2015;1;Gastos de personal;140;Dotación Financiera;2414550,42;362199,96;2776750,38;0,00;0,00;2776750,38;0,00;0,00
+2015;1;Gastos de personal;141;Prestaciones sociales;0,00;0,00;0,00;2776750,38;2776750,38;-2776750,38;2776750,38;0,00
+2015;2;Gastos de funcionamiento;200;Dotación financiera;41012223,24;1657169,72;42669392,96;0,00;0,00;42669392,96;0,00;0,00
+2015;2;Gastos de funcionamiento;211;Tributos;0,00;0,00;0,00;210059,04;210059,04;-210059,04;210059,04;0,00
+2015;2;Gastos de funcionamiento;221;Arrendamiento de bienes;0,00;0,00;0,00;133049,95;131586,31;-131586,31;128752,81;2833,50
+2015;2;Gastos de funcionamiento;222;Reparación y conservación de bienes;0,00;0,00;0,00;5562778,37;5223866,18;-5223866,18;4968260,44;255605,74
+2015;2;Gastos de funcionamiento;223;Suministros;0,00;0,00;0,00;9585927,47;9001878,16;-9001878,16;7961350,18;1040527,98
+2015;2;Gastos de funcionamiento;224;Transportes y comunicaciones;0,00;0,00;0,00;742154,59;742154,59;-742154,59;741364,37;790,22
+2015;2;Gastos de funcionamiento;225;Trabajos realizados por otras empresas;0,00;0,00;0,00;16431937,58;15806804,03;-15806804,03;15103913,02;702891,01
+2015;2;Gastos de funcionamiento;226;Primas de seguros;0,00;0,00;0,00;277814,13;277814,13;-277814,13;277814,13;0,00
+2015;2;Gastos de funcionamiento;227;Material de oficina;0,00;0,00;0,00;2587878,46;2586583,19;-2586583,19;2573901,31;12681,88
+2015;2;Gastos de funcionamiento;228;Gastos diversos;0,00;0,00;0,00;2174545,34;2145673,22;-2145673,22;2129566,21;16107,01
+2015;2;Gastos de funcionamiento;231;Dietas, locomoción y traslados;0,00;0,00;0,00;1503328,15;1470928,15;-1470928,15;1454018,11;16910,04
+2015;2;Gastos de funcionamiento;232;Otras indemnizaciones;0,00;0,00;0,00;451881,21;451881,21;-451881,21;451881,21;0,00
+2015;3;Gastos financieros;300;Bolsa financiera;4570012,00;316384,48;4886396,48;0,00;0,00;4886396,48;0,00;0,00
+2015;3;Gastos financieros;311;Emisión, modificación y cancelación de emprestitos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;3;Gastos financieros;312;Intereses de obligaciones y bonos;0,00;0,00;0,00;3570011,90;3570011,90;-3570011,90;3570011,90;0,00
+2015;3;Gastos financieros;321;Emisión, modificación y cancelación de préstamos;0,00;0,00;0,00;244476,50;244476,50;-244476,50;244476,50;0,00
+2015;3;Gastos financieros;322;Intereses de préstamos y anticipos;0,00;0,00;0,00;240209,95;240209,95;-240209,95;240209,95;0,00
+2015;3;Gastos financieros;331;Intereses de depósitos;0,00;0,00;0,00;2672,81;2672,81;-2672,81;2672,81;0,00
+2015;3;Gastos financieros;341;Intereses de demora;0,00;0,00;0,00;111174,09;111174,09;-111174,09;111174,09;0,00
+2015;3;Gastos financieros;342;Otros gastos financieros;0,00;0,00;0,00;411290,63;411290,63;-411290,63;411290,63;0,00
+2015;4;Transferencias corrientes;400;Dotación financiera;4823778,02;4576338,79;9400116,81;0,00;0,00;9400116,81;0,00;0,00
+2015;4;Transferencias corrientes;471;A familias;0,00;0,00;0,00;5523292,04;5343801,81;-5343801,81;5334451,29;9350,52
+2015;4;Transferencias corrientes;472;A instituciones;0,00;0,00;0,00;961038,09;961038,09;-961038,09;961038,09;0,00
+2015;6;Inversiones reales;600;Dotación financiera;70467939,72;30028966,83;100496906,55;0,00;0,00;100496906,55;0,00;0,00
+2015;6;Inversiones reales;611;Terrenos urbanos y urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;6;Inversiones reales;613;Terrenos no urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;6;Inversiones reales;621;Adquisición de edificios y otras construcciones;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;6;Inversiones reales;623;Construcción;0,00;0,00;0,00;5368651,90;3410254,88;-3410254,88;3410254,88;0,00
+2015;6;Inversiones reales;641;Adquisición mobiliario;0,00;0,00;0,00;450099,80;312427,79;-312427,79;311304,91;1122,88
+2015;6;Inversiones reales;642;Adquisición de enseres;0,00;0,00;0,00;58834,93;58834,93;-58834,93;57395,03;1439,90
+2015;6;Inversiones reales;651;Adquisición equipos procesos información;0,00;0,00;0,00;2565228,79;2369679,16;-2369679,16;2282067,22;87611,94
+2015;6;Inversiones reales;661;Adquisición maquinaria y otro inmov. material;0,00;0,00;0,00;5197600,26;4702202,57;-4702202,57;4677449,75;24752,82
+2015;6;Inversiones reales;663;Construcción de otro inmovilizado material;0,00;0,00;0,00;407959,19;203586,67;-203586,67;203586,67;0,00
+2015;6;Inversiones reales;672;Conservación de edificios y otras construcciones;0,00;0,00;0,00;3713045,41;3297845,76;-3297845,76;3294215,76;3630,00
+2015;6;Inversiones reales;674;Conservación de mobiliario y enseres;0,00;0,00;0,00;730,84;730,84;-730,84;730,84;0,00
+2015;6;Inversiones reales;675;Conserv.de equipos para el proceso de información;0,00;0,00;0,00;797,59;797,59;-797,59;797,59;0,00
+2015;6;Inversiones reales;676;Conservación de maquinaria, instalac. y utillaje;0,00;0,00;0,00;399510,92;260409,43;-260409,43;260409,43;0,00
+2015;6;Inversiones reales;681;Estudios y redacción de planes y normativas;0,00;0,00;0,00;61717,31;61717,31;-61717,31;61717,31;0,00
+2015;6;Inversiones reales;683;Inversiones en investigación científica y técnica;0,00;0,00;0,00;55967477,15;55967477,15;-55967477,15;53579097,13;2388380,02
+2015;6;Inversiones reales;687;Adquisición de inmovilizado inmaterial;0,00;0,00;0,00;760,62;760,62;-760,62;760,62;0,00
+2015;7;Transferencias de capital;700;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;7;Transferencias de capital;773;A instituciones sin fines de lucro;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2015;8;Activos financieros;800;Bolsa financiera;0,00;213239,01;213239,01;0,00;0,00;213239,01;0,00;0,00
+2015;8;Activos financieros;821;Adquisición de acciones fuera del sector público;0,00;0,00;0,00;213239,01;213239,01;-213239,01;213239,01;0,00
+2015;9;Pasivos financieros;900;Bolsa financiera;4157899,97;500000,00;4657899,97;0,00;0,00;4657899,97;0,00;0,00
+2015;9;Pasivos financieros;911;Cancelación de obligaciones y bonos a corto plazo;0,00;0,00;0,00;3129424,27;3129424,27;-3129424,27;3129424,27;0,00
+2015;9;Pasivos financieros;921;Cancelación préstamos a medio y largo plazo;0,00;0,00;0,00;1000000,00;1000000,00;-1000000,00;1000000,00;0,00
+2015;9;Pasivos financieros;931;Cancel.préstamos y antic. corto plazo (en pts.);0,00;0,00;0,00;500000,00;500000,00;-500000,00;500000,00;0,00
+2015;9;Pasivos financieros;935;Cancel.prest.y antic.medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;1;Gastos de personal;100;Dotación financiera;0,00;415096,72;415096,72;0,00;0,00;415096,72;0,00;0,00
+2016;1;Gastos de personal;110;Dotación Financiera;156504392,19;-341528,79;156162863,40;0,00;0,00;156162863,40;0,00;0,00
+2016;1;Gastos de personal;113;Funcionarios;0,00;0,00;0,00;134539801,04;134539801,04;-134539801,04;134539801,04;0,00
+2016;1;Gastos de personal;114;Laboral fijo;0,00;0,00;0,00;13594185,27;13594185,27;-13594185,27;13594185,27;0,00
+2016;1;Gastos de personal;115;Contrataciones Temporales;0,00;0,00;0,00;6824204,69;6824204,69;-6824204,69;6824204,69;0,00
+2016;1;Gastos de personal;120;Dotación Financiera;19648254,18;19751,88;19668006,06;0,00;0,00;19668006,06;0,00;0,00
+2016;1;Gastos de personal;121;Seguridad Social;0,00;0,00;0,00;19413773,00;19413773,00;-19413773,00;14025021,88;5388751,12
+2016;1;Gastos de personal;140;Dotación Financiera;2102047,06;321776,91;2423823,97;0,00;0,00;2423823,97;0,00;0,00
+2016;1;Gastos de personal;141;Prestaciones sociales;0,00;0,00;0,00;2423823,97;2423823,97;-2423823,97;2423823,97;0,00
+2016;2;Gastos de funcionamiento;200;Dotación financiera;42579161,42;1160681,18;43739842,60;0,00;0,00;43739842,60;0,00;0,00
+2016;2;Gastos de funcionamiento;211;Tributos;0,00;0,00;0,00;113825,59;113825,59;-113825,59;113528,20;297,39
+2016;2;Gastos de funcionamiento;221;Arrendamiento de bienes;0,00;0,00;0,00;137044,44;135580,92;-135580,92;135207,51;373,41
+2016;2;Gastos de funcionamiento;222;Reparación y conservación de bienes;0,00;0,00;0,00;5127768,33;5075183,77;-5075183,77;5064734,22;10449,55
+2016;2;Gastos de funcionamiento;223;Suministros;0,00;0,00;0,00;8727184,86;7421057,83;-7421057,83;7307273,88;113783,95
+2016;2;Gastos de funcionamiento;224;Transportes y comunicaciones;0,00;0,00;0,00;760712,81;751784,64;-751784,64;751466,24;318,40
+2016;2;Gastos de funcionamiento;225;Trabajos realizados por otras empresas;0,00;0,00;0,00;17331990,70;16383800,67;-16383800,67;16371575,98;12224,69
+2016;2;Gastos de funcionamiento;226;Primas de seguros;0,00;0,00;0,00;296586,33;296586,33;-296586,33;296586,33;0,00
+2016;2;Gastos de funcionamiento;227;Material de oficina;0,00;0,00;0,00;2743870,22;2742574,95;-2742574,95;2718629,34;23945,61
+2016;2;Gastos de funcionamiento;228;Gastos diversos;0,00;0,00;0,00;2404946,35;2361287,35;-2361287,35;2350558,36;10728,99
+2016;2;Gastos de funcionamiento;231;Dietas, locomoción y traslados;0,00;0,00;0,00;1838456,97;1838456,97;-1838456,97;1830320,38;8136,59
+2016;2;Gastos de funcionamiento;232;Otras indemnizaciones;0,00;0,00;0,00;561550,57;561550,57;-561550,57;561550,57;0,00
+2016;3;Gastos financieros;300;Bolsa financiera;4070011,90;212966,07;4282977,97;0,00;0,00;4282977,97;0,00;0,00
+2016;3;Gastos financieros;311;Emisión, modificación y cancelación de emprestitos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;3;Gastos financieros;312;Intereses de obligaciones y bonos;0,00;0,00;0,00;3570011,90;3570011,90;-3570011,90;3570011,90;0,00
+2016;3;Gastos financieros;321;Emisión, modificación y cancelación de préstamos;0,00;0,00;0,00;165907,66;165907,66;-165907,66;165907,66;0,00
+2016;3;Gastos financieros;322;Intereses de préstamos y anticipos;0,00;0,00;0,00;117385,83;117385,83;-117385,83;117385,83;0,00
+2016;3;Gastos financieros;331;Intereses de depósitos;0,00;0,00;0,00;4869,82;4869,82;-4869,82;4869,82;0,00
+2016;3;Gastos financieros;341;Intereses de demora;0,00;0,00;0,00;108276,19;108276,19;-108276,19;108276,19;0,00
+2016;3;Gastos financieros;342;Otros gastos financieros;0,00;0,00;0,00;26203,28;26203,28;-26203,28;26203,28;0,00
+2016;4;Transferencias corrientes;400;Dotación financiera;4904743,02;6221593,46;11126336,48;0,00;0,00;11126336,48;0,00;0,00
+2016;4;Transferencias corrientes;471;A familias;0,00;0,00;0,00;6036700,62;5872762,94;-5872762,94;5864128,22;8634,72
+2016;4;Transferencias corrientes;472;A instituciones;0,00;0,00;0,00;1394091,74;1011045,98;-1011045,98;1011045,98;0,00
+2016;6;Inversiones reales;600;Dotación financiera;76412873,52;43381545,47;119794418,99;0,00;0,00;119794418,99;0,00;0,00
+2016;6;Inversiones reales;611;Terrenos urbanos y urbanizables;0,00;0,00;0,00;29809,82;29809,82;-29809,82;29809,82;0,00
+2016;6;Inversiones reales;613;Terrenos no urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;6;Inversiones reales;621;Adquisición de edificios y otras construcciones;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;6;Inversiones reales;623;Construcción;0,00;0,00;0,00;5974706,67;5421989,84;-5421989,84;5421989,84;0,00
+2016;6;Inversiones reales;641;Adquisición mobiliario;0,00;0,00;0,00;614324,88;508410,68;-508410,68;505542,99;2867,69
+2016;6;Inversiones reales;642;Adquisición de enseres;0,00;0,00;0,00;53687,94;53687,94;-53687,94;53687,94;0,00
+2016;6;Inversiones reales;651;Adquisición equipos procesos información;0,00;0,00;0,00;2459156,52;2219993,16;-2219993,16;2135125,42;84867,74
+2016;6;Inversiones reales;661;Adquisición maquinaria y otro inmov. material;0,00;0,00;0,00;3683917,23;3193140,58;-3193140,58;3175758,10;17382,48
+2016;6;Inversiones reales;663;Construcción de otro inmovilizado material;0,00;0,00;0,00;258732,95;256011,49;-256011,49;256011,49;0,00
+2016;6;Inversiones reales;672;Conservación de edificios y otras construcciones;0,00;0,00;0,00;5241972,04;5130361,15;-5130361,15;5130361,15;0,00
+2016;6;Inversiones reales;674;Conservación de mobiliario y enseres;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;6;Inversiones reales;675;Conserv.de equipos para el proceso de información;0,00;0,00;0,00;16502,90;16502,90;-16502,90;16502,90;0,00
+2016;6;Inversiones reales;676;Conservación de maquinaria, instalac. y utillaje;0,00;0,00;0,00;561265,01;302927,47;-302927,47;302020,13;907,34
+2016;6;Inversiones reales;681;Estudios y redacción de planes y normativas;0,00;0,00;0,00;131795,64;85331,64;-85331,64;85331,64;0,00
+2016;6;Inversiones reales;683;Inversiones en investigación científica y técnica;0,00;0,00;0,00;58777333,72;58777333,72;-58777333,72;55864994,01;2912339,71
+2016;6;Inversiones reales;687;Adquisición de inmovilizado inmaterial;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;7;Transferencias de capital;700;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;7;Transferencias de capital;773;A instituciones sin fines de lucro;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2016;8;Activos financieros;800;Bolsa financiera;0,00;1848,00;1848,00;0,00;0,00;1848,00;0,00;0,00
+2016;8;Activos financieros;821;Adquisición de acciones fuera del sector público;0,00;0,00;0,00;1840,00;1840,00;-1840,00;1840,00;0,00
+2016;9;Pasivos financieros;900;Bolsa financiera;3069727,01;2025984,84;5095711,85;0,00;0,00;5095711,85;0,00;0,00
+2016;9;Pasivos financieros;911;Cancelación de obligaciones y bonos a corto plazo;0,00;0,00;0,00;2095711,85;2095711,85;-2095711,85;2095711,85;0,00
+2016;9;Pasivos financieros;921;Cancelación préstamos a medio y largo plazo;0,00;0,00;0,00;1000000,00;1000000,00;-1000000,00;1000000,00;0,00
+2016;9;Pasivos financieros;931;Cancel.préstamos y antic. corto plazo (en pts.);0,00;0,00;0,00;2000000,00;2000000,00;-2000000,00;2000000,00;0,00
+2016;9;Pasivos financieros;935;Cancel.prest.y antic.medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;1;Gastos de personal;100;Dotación financiera;0,00;1908641,07;1908641,07;0,00;0,00;1908641,07;0,00;0,00
+2017;1;Gastos de personal;110;Dotación Financiera;156568660,33;1032555,02;157601215,35;0,00;0,00;157601215,35;0,00;0,00
+2017;1;Gastos de personal;113;Funcionarios;0,00;0,00;0,00;135671596,55;135671596,55;-135671596,55;135671596,55;0,00
+2017;1;Gastos de personal;114;Laboral fijo;0,00;0,00;0,00;13878428,52;13878428,52;-13878428,52;13878428,52;0,00
+2017;1;Gastos de personal;115;Contrataciones Temporales;0,00;0,00;0,00;7629391,07;7629391,07;-7629391,07;7629391,07;0,00
+2017;1;Gastos de personal;120;Dotación Financiera;19842428,80;857821,97;20700250,77;0,00;0,00;20700250,77;0,00;0,00
+2017;1;Gastos de personal;121;Seguridad Social;0,00;0,00;0,00;20697163,12;20697163,12;-20697163,12;14628414,10;6068749,02
+2017;1;Gastos de personal;140;Dotación Financiera;1694210,88;0,00;1694210,88;0,00;0,00;1694210,88;0,00;0,00
+2017;1;Gastos de personal;141;Prestaciones sociales;0,00;0,00;0,00;1688224,22;1688224,22;-1688224,22;1688224,22;0,00
+2017;2;Gastos de funcionamiento;200;Dotación financiera;43123801,82;3974006,81;47097808,63;0,00;0,00;47097808,63;0,00;0,00
+2017;2;Gastos de funcionamiento;211;Tributos;0,00;0,00;0,00;312195,03;312195,03;-312195,03;312195,03;0,00
+2017;2;Gastos de funcionamiento;221;Arrendamiento de bienes;0,00;0,00;0,00;107217,83;103278,53;-103278,53;103278,53;0,00
+2017;2;Gastos de funcionamiento;222;Reparación y conservación de bienes;0,00;0,00;0,00;5480829,51;5302020,02;-5302020,02;5297966,76;4053,26
+2017;2;Gastos de funcionamiento;223;Suministros;0,00;0,00;0,00;9493501,45;8575550,68;-8575550,68;8046526,50;529024,18
+2017;2;Gastos de funcionamiento;224;Transportes y comunicaciones;0,00;0,00;0,00;712827,01;703898,86;-703898,86;703827,89;70,97
+2017;2;Gastos de funcionamiento;225;Trabajos realizados por otras empresas;0,00;0,00;0,00;17472503,06;16493108,17;-16493108,17;16490258,10;2850,07
+2017;2;Gastos de funcionamiento;226;Primas de seguros;0,00;0,00;0,00;323583,65;315858,69;-315858,69;315858,69;0,00
+2017;2;Gastos de funcionamiento;227;Material de oficina;0,00;0,00;0,00;2754657,97;2754657,97;-2754657,97;2752826,05;1831,92
+2017;2;Gastos de funcionamiento;228;Gastos diversos;0,00;0,00;0,00;2517669,80;2463949,58;-2463949,58;2462442,71;1506,87
+2017;2;Gastos de funcionamiento;231;Dietas, locomoción y traslados;0,00;0,00;0,00;1698942,72;1698942,72;-1698942,72;1697248,09;1694,63
+2017;2;Gastos de funcionamiento;232;Otras indemnizaciones;0,00;0,00;0,00;508165,92;508165,92;-508165,92;508165,92;0,00
+2017;3;Gastos financieros;300;Bolsa financiera;4070011,90;185747,98;4255759,88;0,00;0,00;4255759,88;0,00;0,00
+2017;3;Gastos financieros;311;Emisión, modificación y cancelación de emprestitos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;3;Gastos financieros;312;Intereses de obligaciones y bonos;0,00;0,00;0,00;3570011,90;3570011,90;-3570011,90;3570011,90;0,00
+2017;3;Gastos financieros;321;Emisión, modificación y cancelación de préstamos;0,00;0,00;0,00;148968,06;148968,06;-148968,06;148968,06;0,00
+2017;3;Gastos financieros;322;Intereses de préstamos y anticipos;0,00;0,00;0,00;74398,89;74398,89;-74398,89;74398,89;0,00
+2017;3;Gastos financieros;331;Intereses de depósitos;0,00;0,00;0,00;3184,67;3184,67;-3184,67;3184,67;0,00
+2017;3;Gastos financieros;341;Intereses de demora;0,00;0,00;0,00;118761,04;118761,04;-118761,04;118761,04;0,00
+2017;3;Gastos financieros;342;Otros gastos financieros;0,00;0,00;0,00;59710,58;59710,58;-59710,58;59710,58;0,00
+2017;4;Transferencias corrientes;400;Dotación financiera;6021260,11;6314393,82;12335653,93;0,00;0,00;12335653,93;0,00;0,00
+2017;4;Transferencias corrientes;471;A familias;0,00;0,00;0,00;7804170,64;7662541,03;-7662541,03;7653215,50;9325,53
+2017;4;Transferencias corrientes;472;A instituciones;0,00;0,00;0,00;1273662,16;1273662,16;-1273662,16;1273662,16;0,00
+2017;6;Inversiones reales;600;Dotación financiera;79108667,18;53707891,23;132816558,41;0,00;0,00;132816558,41;0,00;0,00
+2017;6;Inversiones reales;611;Terrenos urbanos y urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;6;Inversiones reales;613;Terrenos no urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;6;Inversiones reales;621;Adquisición de edificios y otras construcciones;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;6;Inversiones reales;623;Construcción;0,00;0,00;0,00;5356467,07;3720136,71;-3720136,71;3720136,71;0,00
+2017;6;Inversiones reales;641;Adquisición mobiliario;0,00;0,00;0,00;540885,83;475485,76;-475485,76;475485,76;0,00
+2017;6;Inversiones reales;642;Adquisición de enseres;0,00;0,00;0,00;52236,71;52236,71;-52236,71;52236,71;0,00
+2017;6;Inversiones reales;651;Adquisición equipos procesos información;0,00;0,00;0,00;2637365,61;2414606,22;-2414606,22;2409157,47;5448,75
+2017;6;Inversiones reales;661;Adquisición maquinaria y otro inmov. material;0,00;0,00;0,00;2892803,92;2674239,87;-2674239,87;2674239,87;0,00
+2017;6;Inversiones reales;663;Construcción de otro inmovilizado material;0,00;0,00;0,00;184262,15;184262,15;-184262,15;184262,15;0,00
+2017;6;Inversiones reales;672;Conservación de edificios y otras construcciones;0,00;0,00;0,00;7279174,69;4135412,88;-4135412,88;4135412,88;0,00
+2017;6;Inversiones reales;674;Conservación de mobiliario y enseres;0,00;0,00;0,00;4477,00;4477,00;-4477,00;4477,00;0,00
+2017;6;Inversiones reales;675;Conserv.de equipos para el proceso de información;0,00;0,00;0,00;5207,42;5207,42;-5207,42;5207,42;0,00
+2017;6;Inversiones reales;676;Conservación de maquinaria, instalac. y utillaje;0,00;0,00;0,00;576859,79;447571,88;-447571,88;447571,88;0,00
+2017;6;Inversiones reales;681;Estudios y redacción de planes y normativas;0,00;0,00;0,00;131134,25;121454,25;-121454,25;121454,25;0,00
+2017;6;Inversiones reales;683;Inversiones en investigación científica y técnica;0,00;0,00;0,00;62654279,35;62654279,35;-62654279,35;60398644,29;2255635,06
+2017;6;Inversiones reales;687;Adquisición de inmovilizado inmaterial;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;7;Transferencias de capital;700;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;7;Transferencias de capital;773;A instituciones sin fines de lucro;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;8;Activos financieros;800;Bolsa financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;8;Activos financieros;821;Adquisición de acciones fuera del sector público;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;9;Pasivos financieros;900;Bolsa financiera;3004453,16;0,00;3004453,16;0,00;0,00;3004453,16;0,00;0,00
+2017;9;Pasivos financieros;911;Cancelación de obligaciones y bonos a corto plazo;0,00;0,00;0,00;1694414,67;1694414,67;-1694414,67;1694414,67;0,00
+2017;9;Pasivos financieros;921;Cancelación préstamos a medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2017;9;Pasivos financieros;931;Cancel.préstamos y antic. corto plazo;0,00;0,00;0,00;1300000,00;1300000,00;-1300000,00;1300000,00;0,00
+2017;9;Pasivos financieros;935;Cancel.prest.y antic.medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;1;Gastos de personal;100;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;1;Gastos de personal;110;Dotación Financiera;160052980,13;11721591,52;171774571,65;0,00;0,00;171774571,65;0,00;0,00
+2018;1;Gastos de personal;113;Funcionarios;0,00;0,00;0,00;146642685,12;146642685,12;-146642685,12;146642685,12;0,00
+2018;1;Gastos de personal;114;Laboral fijo;0,00;0,00;0,00;11604975,00;11604975,00;-11604975,00;11604975,00;0,00
+2018;1;Gastos de personal;115;Contrataciones Temporales;0,00;0,00;0,00;8386372,63;8386372,63;-8386372,63;8386372,63;0,00
+2018;1;Gastos de personal;120;Dotación Financiera;21778530,67;952134,09;22730664,76;0,00;0,00;22730664,76;0,00;0,00
+2018;1;Gastos de personal;121;Seguridad Social;0,00;0,00;0,00;22088066,46;22088066,46;-22088066,46;15929338,52;6158727,94
+2018;1;Gastos de personal;140;Dotación Financiera;1343812,01;49500,09;1393312,10;0,00;0,00;1393312,10;0,00;0,00
+2018;1;Gastos de personal;141;Prestaciones sociales;0,00;0,00;0,00;1393312,10;1393312,10;-1393312,10;1393312,10;0,00
+2018;2;Gastos de funcionamiento;200;Dotación financiera;44329510,85;1448448,83;45777959,68;39837,75;0,00;45777959,68;0,00;0,00
+2018;2;Gastos de funcionamiento;211;Tributos;0,00;0,00;0,00;170937,87;170937,87;-170937,87;170937,87;0,00
+2018;2;Gastos de funcionamiento;221;Arrendamiento de bienes;0,00;0,00;0,00;191074,27;165954,28;-165954,28;165954,28;0,00
+2018;2;Gastos de funcionamiento;222;Reparación y conservación de bienes;0,00;0,00;0,00;5928951,56;5664963,09;-5664963,09;5664963,09;0,00
+2018;2;Gastos de funcionamiento;223;Suministros;0,00;0,00;0,00;9694351,35;7703718,50;-7703718,50;7703369,62;348,88
+2018;2;Gastos de funcionamiento;224;Transportes y comunicaciones;0,00;0,00;0,00;776137,45;681504,05;-681504,05;681496,15;7,90
+2018;2;Gastos de funcionamiento;225;Trabajos realizados por otras empresas;0,00;0,00;0,00;17476064,90;16394424,10;-16394424,10;16330980,38;63443,72
+2018;2;Gastos de funcionamiento;226;Primas de seguros;0,00;0,00;0,00;292094,42;276644,50;-276644,50;276644,50;0,00
+2018;2;Gastos de funcionamiento;227;Material de oficina;0,00;0,00;0,00;2669451,21;2669451,21;-2669451,21;2669207,85;243,36
+2018;2;Gastos de funcionamiento;228;Gastos diversos;0,00;0,00;0,00;2382476,56;2350799,48;-2350799,48;2336458,54;14340,94
+2018;2;Gastos de funcionamiento;231;Dietas, locomoción y traslados;0,00;0,00;0,00;1778788,19;1737167,99;-1737167,99;1736569,76;598,23
+2018;2;Gastos de funcionamiento;232;Otras indemnizaciones;0,00;0,00;0,00;507006,91;507006,91;-507006,91;507006,91;0,00
+2018;3;Gastos financieros;300;Bolsa financiera;4070011,90;195651,10;4265663,00;0,00;0,00;4265663,00;0,00;0,00
+2018;3;Gastos financieros;311;Emisión, modificación y cancelación de emprestitos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;3;Gastos financieros;312;Intereses de obligaciones y bonos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;3;Gastos financieros;321;Emisión, modificación y cancelación de préstamos;0,00;0,00;0,00;120840,80;120840,80;-120840,80;120840,80;0,00
+2018;3;Gastos financieros;322;Intereses de préstamos y anticipos;0,00;0,00;0,00;36832,35;36832,35;-36832,35;36832,35;0,00
+2018;3;Gastos financieros;331;Intereses de depósitos;0,00;0,00;0,00;500,33;500,33;-500,33;500,33;0,00
+2018;3;Gastos financieros;341;Intereses de demora;0,00;0,00;0,00;148885,30;148885,30;-148885,30;148885,30;0,00
+2018;3;Gastos financieros;342;Otros gastos financieros;0,00;0,00;0,00;13769,79;13769,79;-13769,79;13769,79;0,00
+2018;4;Transferencias corrientes;400;Dotación financiera;6029820,11;3851566,93;9881387,04;0,00;0,00;9881387,04;0,00;0,00
+2018;4;Transferencias corrientes;471;A familias;0,00;0,00;0,00;5727016,08;5547373,06;-5547373,06;5537784,53;9588,53
+2018;4;Transferencias corrientes;472;A instituciones;0,00;0,00;0,00;882342,12;705624,81;-705624,81;705624,81;0,00
+2018;6;Inversiones reales;600;Dotación financiera;78736640,12;58170811,35;136907451,47;20729,91;0,00;136907451,47;0,00;0,00
+2018;6;Inversiones reales;611;Terrenos urbanos y urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;6;Inversiones reales;613;Terrenos no urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;6;Inversiones reales;621;Adquisición de edificios y otras construcciones;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;6;Inversiones reales;623;Construcción;0,00;0,00;0,00;5536605,64;4074172,54;-4074172,54;4074172,54;0,00
+2018;6;Inversiones reales;641;Adquisición mobiliario;0,00;0,00;0,00;433976,77;433976,77;-433976,77;433976,77;0,00
+2018;6;Inversiones reales;642;Adquisición de enseres;0,00;0,00;0,00;41715,68;41715,68;-41715,68;41715,68;0,00
+2018;6;Inversiones reales;651;Adquisición equipos procesos información;0,00;0,00;0,00;2189031,70;2035476,89;-2035476,89;2035476,89;0,00
+2018;6;Inversiones reales;661;Adquisición maquinaria y otro inmov. material;0,00;0,00;0,00;2735149,60;2374615,65;-2374615,65;2373415,65;1200,00
+2018;6;Inversiones reales;663;Construcción de otro inmovilizado material;0,00;0,00;0,00;131581,53;131581,53;-131581,53;131581,53;0,00
+2018;6;Inversiones reales;672;Conservación de edificios y otras construcciones;0,00;0,00;0,00;5425708,79;4592041,14;-4592041,14;4592041,14;0,00
+2018;6;Inversiones reales;674;Conservación de mobiliario y enseres;0,00;0,00;0,00;13739,97;13739,97;-13739,97;13739,97;0,00
+2018;6;Inversiones reales;675;Conserv.de equipos para el proceso de información;0,00;0,00;0,00;1765,44;1765,44;-1765,44;1765,44;0,00
+2018;6;Inversiones reales;676;Conservación de maquinaria, instalac. y utillaje;0,00;0,00;0,00;650777,19;382284,80;-382284,80;382284,80;0,00
+2018;6;Inversiones reales;681;Estudios y redacción de planes y normativas;0,00;0,00;0,00;156184,64;146504,64;-146504,64;146504,64;0,00
+2018;6;Inversiones reales;683;Inversiones en investigación científica y técnica;0,00;0,00;0,00;67704669,92;66812864,64;-66812864,64;63514279,14;3298585,50
+2018;6;Inversiones reales;687;Adquisición de inmovilizado inmaterial;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;7;Transferencias de capital;700;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;7;Transferencias de capital;773;A instituciones sin fines de lucro;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;8;Activos financieros;800;Bolsa financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;8;Activos financieros;821;Adquisición de acciones fuera del sector público;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;9;Pasivos financieros;900;Bolsa financiera;1498351,46;1817,53;1500168,99;0,00;0,00;1500168,99;0,00;0,00
+2018;9;Pasivos financieros;911;Cancelación de obligaciones y bonos a corto plazo;0,00;0,00;0,00;1499895,52;1499895,52;-1499895,52;1499895,52;0,00
+2018;9;Pasivos financieros;921;Cancelación préstamos a medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;9;Pasivos financieros;931;Cancel.préstamos y antic. corto plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2018;9;Pasivos financieros;935;Cancel.prest.y antic.medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;1;Gastos de personal;100;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;1;Gastos de personal;110;Dotación Financiera;168503840,50;5304564,29;173808404,80;0,00;0,00;173808404,80;0,00;0,00
+2019;1;Gastos de personal;113;Funcionarios;0,00;0,00;0,00;152532111,00;152532111,00;-152532111,00;152532111,00;0,00
+2019;1;Gastos de personal;114;Laboral fijo;0,00;0,00;0,00;9492919,41;9492919,41;-9492919,41;9492919,41;0,00
+2019;1;Gastos de personal;115;Contrataciones Temporales;0,00;0,00;0,00;7181220,27;7181220,27;-7181220,27;7181220,27;0,00
+2019;1;Gastos de personal;120;Dotación Financiera;22145711,98;1178029,46;23323741,44;0,00;0,00;23323741,44;0,00;0,00
+2019;1;Gastos de personal;121;Seguridad Social;0,00;0,00;0,00;23323741,44;23323741,44;-23323741,44;16981166,20;6342575,24
+2019;1;Gastos de personal;140;Dotación Financiera;883042,77;1075,01;884117,78;0,00;0,00;884117,78;0,00;0,00
+2019;1;Gastos de personal;141;Prestaciones sociales;0,00;0,00;0,00;884117,78;884117,78;-884117,78;884117,78;0,00
+2019;2;Gastos de funcionamiento;200;Dotación financiera;45779915,64;4947304,53;50727220,17;73169,85;0,00;50727220,17;0,00;0,00
+2019;2;Gastos de funcionamiento;211;Tributos;0,00;0,00;0,00;292453,61;292453,61;-292453,61;292453,61;0,00
+2019;2;Gastos de funcionamiento;221;Arrendamiento de bienes;0,00;0,00;0,00;167985,33;166522,17;-166522,17;166522,17;0,00
+2019;2;Gastos de funcionamiento;222;Reparación y conservación de bienes;0,00;0,00;0,00;6520252,32;6050755,24;-6050755,24;6047401,65;3353,59
+2019;2;Gastos de funcionamiento;223;Suministros;0,00;0,00;0,00;10404940,95;8456837,17;-8456837,17;8443769,17;13068,00
+2019;2;Gastos de funcionamiento;224;Transportes y comunicaciones;0,00;0,00;0,00;668493,97;634516,30;-634516,30;634516,30;0,00
+2019;2;Gastos de funcionamiento;225;Trabajos realizados por otras empresas;0,00;0,00;0,00;19196860,43;17065476,51;-17065476,51;17065476,51;0,00
+2019;2;Gastos de funcionamiento;226;Primas de seguros;0,00;0,00;0,00;297389,50;287082,62;-287082,62;287082,62;0,00
+2019;2;Gastos de funcionamiento;227;Material de oficina;0,00;0,00;0,00;2989540,38;2989540,38;-2989540,38;2989465,13;75,25
+2019;2;Gastos de funcionamiento;228;Gastos diversos;0,00;0,00;0,00;2328472,44;2321762,95;-2321762,95;2320517,58;1245,37
+2019;2;Gastos de funcionamiento;231;Dietas, locomoción y traslados;0,00;0,00;0,00;1739860,93;1686463,84;-1686463,84;1686111,84;352,00
+2019;2;Gastos de funcionamiento;232;Otras indemnizaciones;0,00;0,00;0,00;486836,88;486836,88;-486836,88;486836,88;0,00
+2019;3;Gastos financieros;300;Bolsa financiera;4072210,00;216797,74;4289007,74;0,00;0,00;4289007,74;0,00;0,00
+2019;3;Gastos financieros;311;Emisión, modificación y cancelación de emprestitos;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;3;Gastos financieros;312;Intereses de obligaciones y bonos;0,00;0,00;0,00;3570011,90;3570011,90;-3570011,90;3570011,90;0,00
+2019;3;Gastos financieros;321;Emisión, modificación y cancelación de préstamos;0,00;0,00;0,00;84571,41;84571,41;-84571,41;84571,41;0,00
+2019;3;Gastos financieros;322;Intereses de préstamos y anticipos;0,00;0,00;0,00;32157,79;32157,79;-32157,79;32157,79;0,00
+2019;3;Gastos financieros;331;Intereses de depósitos;0,00;0,00;0,00;734,65;734,65;-734,65;734,65;0,00
+2019;3;Gastos financieros;341;Intereses de demora;0,00;0,00;0,00;166293,38;166293,38;-166293,38;166293,38;0,00
+2019;3;Gastos financieros;342;Otros gastos financieros;0,00;0,00;0,00;6340,42;6340,42;-6340,42;6340,42;0,00
+2019;4;Transferencias corrientes;400;Dotación financiera;6873507,98;4365369,81;11238877,79;0,00;0,00;11238877,79;0,00;0,00
+2019;4;Transferencias corrientes;471;A familias;0,00;0,00;0,00;8393376,70;8106281,30;-8106281,30;8093379,90;12901,40
+2019;4;Transferencias corrientes;472;A instituciones;0,00;0,00;0,00;1188546,70;1042208,74;-1042208,74;1042208,74;0,00
+2019;6;Inversiones reales;600;Dotación financiera;91797606,04;92066896,13;183864502,20;20988,23;0,00;183864502,20;0,00;0,00
+2019;6;Inversiones reales;611;Terrenos urbanos y urbanizables;0,00;0,00;0,00;4146,67;4146,67;-4146,67;4146,67;0,00
+2019;6;Inversiones reales;613;Terrenos no urbanizables;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;6;Inversiones reales;621;Adquisición de edificios y otras construcciones;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;6;Inversiones reales;623;Construcción;0,00;0,00;0,00;4463938,94;3760106,13;-3760106,13;3760106,13;0,00
+2019;6;Inversiones reales;641;Adquisición mobiliario;0,00;0,00;0,00;617057,13;617057,12;-617057,12;617057,12;0,00
+2019;6;Inversiones reales;642;Adquisición de enseres;0,00;0,00;0,00;63717,60;63717,60;-63717,60;63717,60;0,00
+2019;6;Inversiones reales;651;Adquisición equipos procesos información;0,00;0,00;0,00;2861000,24;2757310,90;-2757310,90;2755857,08;1453,82
+2019;6;Inversiones reales;661;Adquisición maquinaria y otro inmov. material;0,00;0,00;0,00;3940826,98;3839360,03;-3839360,03;3839360,03;0,00
+2019;6;Inversiones reales;663;Construcción de otro inmovilizado material;0,00;0,00;0,00;184713,57;105511,22;-105511,22;105511,22;0,00
+2019;6;Inversiones reales;672;Conservación de edificios y otras construcciones;0,00;0,00;0,00;3523337,96;3376322,75;-3376322,75;3376322,75;0,00
+2019;6;Inversiones reales;674;Conservación de mobiliario y enseres;0,00;0,00;0,00;5713,62;5713,62;-5713,62;5713,62;0,00
+2019;6;Inversiones reales;675;Conserv.de equipos para el proceso de información;0,00;0,00;0,00;13429,03;13429,03;-13429,03;13429,03;0,00
+2019;6;Inversiones reales;676;Conservación de maquinaria, instalac. y utillaje;0,00;0,00;0,00;692519,57;561123,25;-561123,25;561123,25;0,00
+2019;6;Inversiones reales;681;Estudios y redacción de planes y normativas;0,00;0,00;0,00;145977,73;145977,73;-145977,73;145977,73;0,00
+2019;6;Inversiones reales;683;Inversiones en investigación científica y técnica;0,00;0,00;0,00;71956877,69;71956877,69;-71956877,69;69563723,23;2393154,46
+2019;6;Inversiones reales;687;Adquisición de inmovilizado inmaterial;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;7;Transferencias de capital;700;Dotación financiera;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;7;Transferencias de capital;773;A instituciones sin fines de lucro;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;8;Activos financieros;800;Bolsa financiera;0,00;7400,00;7400,00;0,00;0,00;7400,00;0,00;0,00
+2019;8;Activos financieros;821;Adquisición de acciones fuera del sector público;0,00;0,00;0,00;7400,00;7400,00;-7400,00;7400,00;0,00
+2019;9;Pasivos financieros;900;Bolsa financiera;1247550,47;0,00;1247550,47;0,00;0,00;1247550,47;0,00;0,00
+2019;9;Pasivos financieros;911;Cancelación de obligaciones y bonos a corto plazo;0,00;0,00;0,00;1240920,14;1240920,14;-1240920,14;1240920,14;0,00
+2019;9;Pasivos financieros;921;Cancelación préstamos a medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;9;Pasivos financieros;931;Cancel.préstamos y antic. corto plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
+2019;9;Pasivos financieros;935;Cancel.prest.y antic.medio y largo plazo;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00
