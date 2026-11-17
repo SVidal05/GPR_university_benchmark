@@ -58,14 +58,14 @@ def download_csv(df, name):
 st.sidebar.title("UPV Benchmark")
 page = st.sidebar.radio(
     "Explorar", ["Resumen UPV", "Internacionalización", "Recursos académicos",
-                "Presupuesto", "Calidad de datos"]
+                "Presupuesto", "No desempleo", "Calidad de datos"]
 )
 st.sidebar.divider()
 st.sidebar.caption("Fuente: CSV procesados del repositorio GPR_university_benchmark.")
 st.sidebar.caption("Las series tienen períodos de cobertura distintos.")
 
 st.title("UPV Benchmark Explorer")
-st.caption("Exploración interactiva de matrícula, movilidad internacional, PDI y recursos económicos")
+st.caption("Exploración interactiva de matrícula, movilidad internacional, no desempleo, PDI y recursos económicos")
 
 if page == "Resumen UPV":
     st.subheader("Evolución institucional")
@@ -208,8 +208,63 @@ elif page == "Presupuesto":
             plot(line(per_student.sort_values("AÑO"), "AÑO", "GASTO_POR_MATRICULA", "Gasto ejecutado por matrícula", "Euros / matrícula"))
             st.caption("Cálculo con matrícula del curso que comienza en el mismo año natural del presupuesto. Es una aproximación metodológica.")
 
+elif page == "No desempleo":
+    st.subheader("Porcentaje de no desempleados por titulación y centro")
+    st.info("Indicador publicado en los CSV de origen. No desempleo no equivale necesariamente a empleo. Sin denominadores de encuesta, las medias son simples entre registros de titulación-centro; no son tasas globales de la UPV. El curso es el de la fuente, no una fecha de encuesta inferida.")
+    df = get("no_desempleo")
+    if df is not None and not df.empty:
+        df = numeric(df, ["P_NO_DESEMPLEADOS"])
+        # Solo filas presentes en la fuente, incluso si en futuras entregas tienen nulos.
+        df = df[df["ARCHIVO_NO_DESEMPLEO"].notna()].copy()
+        centros = sorted(df["CENTRO"].dropna().unique())
+        selected_centros = st.multiselect("Centros (vacío = todos)", centros)
+        if selected_centros:
+            df = df[df["CENTRO"].isin(selected_centros)]
+        titles = sorted(df["TITULACION"].dropna().unique())
+        selected_titles = st.multiselect("Titulaciones (vacío = todas)", titles)
+        if selected_titles:
+            df = df[df["TITULACION"].isin(selected_titles)]
+        cursos = course_order(df["CURSO"])
+        if not cursos:
+            st.info("No hay registros con esos filtros.")
+        else:
+            curso = st.selectbox("Curso académico", cursos, index=len(cursos)-1)
+            d = df[df["CURSO"] == curso].copy()
+            a, b, c = st.columns(3)
+            a.metric("Media simple", fmt_pct(d["P_NO_DESEMPLEADOS"].mean()))
+            b.metric("Mediana", fmt_pct(d["P_NO_DESEMPLEADOS"].median()))
+            c.metric("Registros con dato / publicados", f"{d['P_NO_DESEMPLEADOS'].count()} / {len(d)}")
+            annual = df.groupby("CURSO", as_index=False).agg(MEDIA=("P_NO_DESEMPLEADOS", "mean"), MEDIANA=("P_NO_DESEMPLEADOS", "median"))
+            series = annual.melt(id_vars="CURSO", var_name="Estadístico", value_name="Porcentaje")
+            fig = line(series, "CURSO", "Porcentaje", "Evolución entre registros disponibles", "Porcentaje (%)", color="Estadístico")
+            fig.update_yaxes(range=[0, 100])
+            plot(fig)
+            st.caption("La composición de titulaciones disponibles cambia por curso. La evolución de estas medias no representa un panel constante.")
+            valid = d.dropna(subset=["P_NO_DESEMPLEADOS"])
+            if not valid.empty:
+                left, right = st.columns(2)
+                with left:
+                    centers = valid.groupby("CENTRO", as_index=False).agg(MEDIA=("P_NO_DESEMPLEADOS", "mean"), REGISTROS=("P_NO_DESEMPLEADOS", "count"))
+                    fig = px.bar(centers.sort_values("MEDIA"), x="MEDIA", y="CENTRO", orientation="h", hover_data=["REGISTROS"], title="Media simple por centro")
+                    fig.update_xaxes(title="Porcentaje (%)", range=[0, 100])
+                    plot(fig)
+                with right:
+                    fig = px.histogram(valid, x="P_NO_DESEMPLEADOS", nbins=20, title="Distribución entre titulaciones-centro")
+                    fig.update_xaxes(title="Porcentaje (%)", range=[0, 100])
+                    fig.update_yaxes(title="Registros")
+                    plot(fig)
+                st.caption("Los valores 0 y 100 se conservan tal como aparecen en la fuente; no conocemos el tamaño de las muestras.")
+            columns = ["CURSO", "COD_RUCT", "TITULACION", "CENTRO", "P_NO_DESEMPLEADOS", "ARCHIVO_NO_DESEMPLEO"]
+            st.dataframe(d[columns].sort_values("P_NO_DESEMPLEADOS", ascending=False), use_container_width=True, hide_index=True)
+            download_csv(d[columns], f"upv_no_desempleo_{curso}.csv")
+
 elif page == "Calidad de datos":
     st.subheader("Cobertura y disponibilidad")
+    employment_coverage = get("cobertura_no_desempleo")
+    if employment_coverage is not None and not employment_coverage.empty:
+        plot(bar(employment_coverage, "CURSO", "CON_NO_DESEMPLEO_PCT", "Cobertura de no desempleo en el dataset integrado", "Curso", "Cobertura (%)"))
+        st.dataframe(employment_coverage, use_container_width=True, hide_index=True)
+        st.caption("Denominador: unión de claves de movilidad y no desempleo. En 2019-20 solo hay claves de no desempleo; 100% no implica cobertura de toda la oferta UPV. Las tablas de movilidad siguientes conservan su universo original.")
     cov = get("cobertura")
     full = get("cobertura_completa")
     if cov is not None and not cov.empty:
