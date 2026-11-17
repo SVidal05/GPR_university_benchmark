@@ -7,6 +7,8 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data" / "processed"
 
 FILES = {
+    "no_desempleo": "upv_titulaciones_integrado.csv",
+    "cobertura_no_desempleo": "cobertura_no_desempleo.csv",
     "matricula": "upv_matricula.csv",
     "matricula_anual": "upv_matricula_anual.csv",
     "pdi": "upv_pdi.csv",
@@ -21,6 +23,8 @@ FILES = {
 }
 
 REQUIRED_COLUMNS = {
+    "no_desempleo": {"CURSO", "COD_RUCT", "TITULACION", "CENTRO", "P_NO_DESEMPLEADOS", "ARCHIVO_NO_DESEMPLEO"},
+    "cobertura_no_desempleo": {"CURSO", "TOTAL_REGISTROS", "CON_NO_DESEMPLEO", "CON_NO_DESEMPLEO_PCT"},
     "matricula": {"CURSO", "COD_RUCT", "TITULACION", "CENTRO", "NUMERO_ALUMNOS_MATRICULADOS"},
     "matricula_anual": {"CURSO", "ALUMNOS", "TITULACIONES", "CENTROS"},
     "pdi": {"AÑO", "COLECTIVO", "DEPARTAMENTO", "CATEGORÍA", "SEXO", "CASOS"},
