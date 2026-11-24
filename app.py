@@ -4,20 +4,60 @@ Ejecutar desde la raíz del repositorio:
     streamlit run app.py
 Los CSV se leen desde data/processed/; no se requiere ejecutar notebooks.
 """
+import logging
+
 import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-from dashboard.charts import bar, line, coverage_heatmap
-from dashboard.data_loader import DATA_DIR, FILES, course_order, load_table, numeric
+from dashboard.charts import PALETTE, bar, line
+from dashboard.data_loader import FILES, course_order, load_table, numeric
+
+logger = logging.getLogger(__name__)
 
 st.set_page_config(page_title="UPV Benchmark Explorer", page_icon="🎓", layout="wide")
 
-# Tipografía y espaciado básico sin depender de imágenes o archivos estáticos.
 st.markdown("""
 <style>
-.block-container {padding-top: 1.7rem; max-width: 1450px;}
-[data-testid="stMetric"] {border: 1px solid rgba(128,128,128,.19); border-radius: 12px; padding: 12px;}
+.block-container {padding-top: 3.5rem; max-width: 1380px;}
+.st-key-section_navigation [aria-label="Secciones"] {
+    gap: .55rem;
+    padding: .25rem .2rem .7rem;
+    border-bottom: 1px solid #aab991;
+}
+.st-key-section_navigation button[data-variant="segmented_control"] {
+    min-height: 2.75rem;
+    padding: .55rem 1rem;
+    border: 1px solid #aab991;
+    border-radius: .4rem;
+    background: #eef2e5;
+    color: #344420;
+    transition: background-color .15s ease;
+}
+.st-key-section_navigation button[data-variant="segmented_control"] p {
+    font-weight: 600;
+}
+.st-key-section_navigation button[data-variant="segmented_control"]:hover {
+    background: #dbe5ca;
+}
+.st-key-section_navigation button[data-variant="segmented_control"][data-selected] {
+    background: #b6cb93;
+    border-color: #718a4e;
+    box-shadow: inset 0 -3px #718a4e;
+}
+.st-key-section_navigation button[data-variant="segmented_control"]:focus-visible {
+    outline: 2px solid #536b37;
+    outline-offset: 2px;
+}
+[data-testid="stMetric"] {
+    background: #f0f4e7;
+    color: #344420;
+    border: 1px solid #d6dfc2;
+    border-top: 3px solid #a4b883;
+    border-radius: .7rem;
+    padding: .8rem 1rem;
+}
+[data-testid="stMetric"] p {color: #344420;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -37,11 +77,11 @@ def fmt_eur(value):
 def get(key):
     try:
         df = load_table(key)
-    except (ValueError, pd.errors.ParserError, UnicodeError) as exc:
-        st.error(f"No se puede utilizar {FILES[key]}: {exc}")
+    except (ValueError, pd.errors.ParserError, UnicodeError):
+        logger.exception("No se puede utilizar %s", FILES[key])
         return None
     if df is None:
-        st.warning(f"No se encuentra `data/processed/{FILES[key]}`. Añádelo al repositorio para activar esta sección.")
+        logger.warning("No se encuentra data/processed/%s", FILES[key])
     return df
 
 
@@ -55,17 +95,16 @@ def download_csv(df, name):
                        file_name=name, mime="text/csv")
 
 
-st.sidebar.title("UPV Benchmark")
-page = st.sidebar.radio(
-    "Explorar", ["Resumen UPV", "Internacionalización", "Recursos académicos",
-                "Presupuesto", "No desempleo", "Calidad de datos"]
-)
-st.sidebar.divider()
-st.sidebar.caption("Fuente: CSV procesados del repositorio GPR_university_benchmark.")
-st.sidebar.caption("Las series tienen períodos de cobertura distintos.")
-
 st.title("UPV Benchmark Explorer")
-st.caption("Exploración interactiva de matrícula, movilidad internacional, no desempleo, PDI y recursos económicos")
+page = st.segmented_control(
+    "Secciones", ["Resumen UPV", "Internacionalización", "Recursos académicos",
+                  "Presupuesto", "No desempleo", "Calidad de datos"],
+    default="Resumen UPV",
+    required=True,
+    wrap=True,
+    key="section_navigation",
+    label_visibility="collapsed",
+)
 
 if page == "Resumen UPV":
     st.subheader("Evolución institucional")
@@ -83,7 +122,6 @@ if page == "Resumen UPV":
         c.metric("Centros", fmt_int(ultimo["CENTROS"]))
         plot(line(matricula, "CURSO", "ALUMNOS", "Evolución de matrículas", "Alumnos matriculados"))
         plot(line(matricula, "CURSO", "TITULACIONES", "Evolución de titulaciones", "Códigos de titulación diferentes"))
-        st.caption("Las titulaciones son códigos distintos; una titulación impartida en varios centros puede aparecer en varias filas del dato detallado.")
     if pdi is not None and not pdi.empty:
         pdi = numeric(pdi, ["PDI_TOTAL"])
         st.subheader("Personal docente e investigador")
@@ -91,7 +129,6 @@ if page == "Resumen UPV":
     if ratio is not None and not ratio.empty:
         ratio = numeric(ratio, ["MATRICULAS_POR_PDI"])
         plot(line(ratio.sort_values("AÑO"), "AÑO", "MATRICULAS_POR_PDI", "Matrículas por PDI", "Matrículas / PDI"))
-        st.caption("La ratio relaciona el año natural del PDI con el curso académico que comienza ese año.")
 
 elif page == "Internacionalización":
     st.subheader("Movilidad por titulación y centro")
@@ -120,13 +157,10 @@ elif page == "Internacionalización":
                           valid["NUMERO_ALUMNOS_MATRICULADOS"].sum()) if len(valid) else float("nan")
         a, b, c, e = st.columns(4)
         a.metric("Movilidad entrante registrada", fmt_int(incoming_total))
-        b.metric("Movilidad entrante / matrícula*", fmt_pct(weighted_ratio))
-        c.metric("Media % movilidad saliente**", fmt_pct(outgoing_valid.mean()))
+        b.metric("Entrantes / matrícula en filas completas", fmt_pct(weighted_ratio))
+        c.metric("Media de movilidad saliente", fmt_pct(outgoing_valid.mean()))
         e.metric("Con datos para ratio", f"{len(valid)}/{len(d)}")
-        st.caption("* Ratio agregada calculada solo con filas con movilidad y matrícula válidas; no representa necesariamente toda la UPV. ** Media simple de porcentajes de titulaciones-centro disponibles; no es una tasa global de alumnos salientes.")
-        if d.empty:
-            st.info("No hay registros con esos filtros.")
-        else:
+        if not d.empty:
             left, right = st.columns(2)
             with left:
                 incoming = d.dropna(subset=["MOVILIDAD_ENTRANTE"]).groupby("CENTRO", as_index=False)["MOVILIDAD_ENTRANTE"].sum().sort_values("MOVILIDAD_ENTRANTE", ascending=False).head(15)
@@ -138,14 +172,12 @@ elif page == "Internacionalización":
                     by_center["RATIO"] = 100 * by_center["entrantes"] / by_center["matriculas"]
                     by_center = by_center.sort_values("RATIO").tail(15)
                     plot(bar(by_center, "RATIO", "CENTRO", "Movilidad por 100 matriculados (filas completas)", "Porcentaje (%)", "", "h"))
-            st.markdown("#### Explorar titulaciones")
             view = d.copy()
             view["RATIO_MOVILIDAD_ENTRANTE"] = pd.NA
             good = view["MOVILIDAD_ENTRANTE"].notna() & view["NUMERO_ALUMNOS_MATRICULADOS"].notna() & (view["NUMERO_ALUMNOS_MATRICULADOS"] > 0)
             view.loc[good, "RATIO_MOVILIDAD_ENTRANTE"] = 100 * view.loc[good, "MOVILIDAD_ENTRANTE"] / view.loc[good, "NUMERO_ALUMNOS_MATRICULADOS"]
             view["RATIO_MOVILIDAD_ENTRANTE"] = pd.to_numeric(view["RATIO_MOVILIDAD_ENTRANTE"], errors="coerce")
             cols = ["CURSO", "COD_RUCT", "TITULACION", "CENTRO", "MOVILIDAD_ENTRANTE", "PORC_MOVILIDAD_SALIENTE", "NUMERO_ALUMNOS_MATRICULADOS", "RATIO_MOVILIDAD_ENTRANTE"]
-            st.dataframe(view[cols].sort_values("MOVILIDAD_ENTRANTE", ascending=False), use_container_width=True, hide_index=True)
             download_csv(view[cols], f"upv_movilidad_{curso}.csv")
 
 elif page == "Recursos académicos":
@@ -161,7 +193,6 @@ elif page == "Recursos académicos":
         if chosen:
             d = d[d["COLECTIVO"].isin(chosen)]
         st.metric("PDI registrado en la selección", fmt_int(d["CASOS"].sum()))
-        st.caption("PDI representado como suma de la columna CASOS, no como recuento de filas.")
         left, right = st.columns(2)
         with left:
             categories = d.groupby("CATEGORÍA", as_index=False)["CASOS"].sum().sort_values("CASOS", ascending=False).head(12)
@@ -170,14 +201,12 @@ elif page == "Recursos académicos":
         with right:
             sexes = d.groupby("SEXO", as_index=False)["CASOS"].sum()
             if not sexes.empty:
-                fig = px.pie(sexes, values="CASOS", names="SEXO", title="Distribución por sexo", hole=.45)
+                fig = px.pie(sexes, values="CASOS", names="SEXO", color_discrete_sequence=PALETTE, title="Distribución por sexo", hole=.45)
                 plot(fig)
         departments = d.groupby("DEPARTAMENTO", as_index=False)["CASOS"].sum().sort_values("CASOS", ascending=False).head(15)
         if not departments.empty:
             plot(bar(departments.sort_values("CASOS"), "CASOS", "DEPARTAMENTO", "Departamentos con más PDI", "Personas", "", "h"))
-        with st.expander("Ver registros detallados"):
-            st.dataframe(d, use_container_width=True, hide_index=True)
-            download_csv(d, f"upv_pdi_{year}.csv")
+        download_csv(d, f"upv_pdi_{year}.csv")
 
 elif page == "Presupuesto":
     st.subheader("Presupuesto y ejecución del gasto")
@@ -196,7 +225,6 @@ elif page == "Presupuesto":
         c.metric("Ejecución presupuestaria", fmt_pct(cur["EJECUCION_PCT"]))
         series = annual.melt(id_vars="AÑO", value_vars=["PRESUPUESTO_DEFINITIVO", "GASTO_EJECUTADO"], var_name="Indicador", value_name="Euros")
         plot(line(series, "AÑO", "Euros", "Evolución de presupuesto y gasto", "Euros", color="Indicador"))
-        st.caption("Gasto ejecutado: obligaciones reconocidas netas. No equivale necesariamente a pagos realizados.")
         if detail is not None:
             detail = numeric(detail, ["OBLIGACIONES_RECONOCIDAS_NETAS_EUR", "PRESUPUESTO_DEFINITIVO_EUR"])
             d = detail[detail["AÑO"] == year]
@@ -206,11 +234,9 @@ elif page == "Presupuesto":
         if per_student is not None:
             per_student = numeric(per_student, ["GASTO_POR_MATRICULA"])
             plot(line(per_student.sort_values("AÑO"), "AÑO", "GASTO_POR_MATRICULA", "Gasto ejecutado por matrícula", "Euros / matrícula"))
-            st.caption("Cálculo con matrícula del curso que comienza en el mismo año natural del presupuesto. Es una aproximación metodológica.")
 
 elif page == "No desempleo":
     st.subheader("Porcentaje de no desempleados por titulación y centro")
-    st.info("Indicador publicado en los CSV de origen. No desempleo no equivale necesariamente a empleo. Sin denominadores de encuesta, las medias son simples entre registros de titulación-centro; no son tasas globales de la UPV. El curso es el de la fuente, no una fecha de encuesta inferida.")
     df = get("no_desempleo")
     if df is not None and not df.empty:
         df = numeric(df, ["P_NO_DESEMPLEADOS"])
@@ -225,9 +251,7 @@ elif page == "No desempleo":
         if selected_titles:
             df = df[df["TITULACION"].isin(selected_titles)]
         cursos = course_order(df["CURSO"])
-        if not cursos:
-            st.info("No hay registros con esos filtros.")
-        else:
+        if cursos:
             curso = st.selectbox("Curso académico", cursos, index=len(cursos)-1)
             d = df[df["CURSO"] == curso].copy()
             a, b, c = st.columns(3)
@@ -239,23 +263,20 @@ elif page == "No desempleo":
             fig = line(series, "CURSO", "Porcentaje", "Evolución entre registros disponibles", "Porcentaje (%)", color="Estadístico")
             fig.update_yaxes(range=[0, 100])
             plot(fig)
-            st.caption("La composición de titulaciones disponibles cambia por curso. La evolución de estas medias no representa un panel constante.")
             valid = d.dropna(subset=["P_NO_DESEMPLEADOS"])
             if not valid.empty:
                 left, right = st.columns(2)
                 with left:
                     centers = valid.groupby("CENTRO", as_index=False).agg(MEDIA=("P_NO_DESEMPLEADOS", "mean"), REGISTROS=("P_NO_DESEMPLEADOS", "count"))
-                    fig = px.bar(centers.sort_values("MEDIA"), x="MEDIA", y="CENTRO", orientation="h", hover_data=["REGISTROS"], title="Media simple por centro")
+                    fig = px.bar(centers.sort_values("MEDIA"), x="MEDIA", y="CENTRO", orientation="h", hover_data=["REGISTROS"], color_discrete_sequence=PALETTE, title="Media simple por centro")
                     fig.update_xaxes(title="Porcentaje (%)", range=[0, 100])
                     plot(fig)
                 with right:
-                    fig = px.histogram(valid, x="P_NO_DESEMPLEADOS", nbins=20, title="Distribución entre titulaciones-centro")
+                    fig = px.histogram(valid, x="P_NO_DESEMPLEADOS", nbins=20, color_discrete_sequence=PALETTE, title="Distribución entre titulaciones-centro")
                     fig.update_xaxes(title="Porcentaje (%)", range=[0, 100])
                     fig.update_yaxes(title="Registros")
                     plot(fig)
-                st.caption("Los valores 0 y 100 se conservan tal como aparecen en la fuente; no conocemos el tamaño de las muestras.")
             columns = ["CURSO", "COD_RUCT", "TITULACION", "CENTRO", "P_NO_DESEMPLEADOS", "ARCHIVO_NO_DESEMPLEO"]
-            st.dataframe(d[columns].sort_values("P_NO_DESEMPLEADOS", ascending=False), use_container_width=True, hide_index=True)
             download_csv(d[columns], f"upv_no_desempleo_{curso}.csv")
 
 elif page == "Calidad de datos":
@@ -263,24 +284,28 @@ elif page == "Calidad de datos":
     employment_coverage = get("cobertura_no_desempleo")
     if employment_coverage is not None and not employment_coverage.empty:
         plot(bar(employment_coverage, "CURSO", "CON_NO_DESEMPLEO_PCT", "Cobertura de no desempleo en el dataset integrado", "Curso", "Cobertura (%)"))
-        st.dataframe(employment_coverage, use_container_width=True, hide_index=True)
-        st.caption("Denominador: unión de claves de movilidad y no desempleo. En 2019-20 solo hay claves de no desempleo; 100% no implica cobertura de toda la oferta UPV. Las tablas de movilidad siguientes conservan su universo original.")
     cov = get("cobertura")
     full = get("cobertura_completa")
     if cov is not None and not cov.empty:
-        cols = ["CON_MATRICULA_PCT", "CON_MOVILIDAD_ENTRANTE_PCT", "CON_MOVILIDAD_SALIENTE_PCT"]
-        cov = numeric(cov, cols + ["TOTAL_REGISTROS"])
+        indicators = {
+            "CON_MATRICULA_PCT": "Matrícula",
+            "CON_MOVILIDAD_ENTRANTE_PCT": "Movilidad entrante",
+            "CON_MOVILIDAD_SALIENTE_PCT": "Movilidad saliente",
+        }
+        cov = numeric(cov, list(indicators) + ["TOTAL_REGISTROS"])
         cov["CURSO"] = pd.Categorical(cov["CURSO"], categories=course_order(cov["CURSO"]), ordered=True)
         cov = cov.sort_values("CURSO")
-        plot(coverage_heatmap(cov))
-        st.dataframe(cov, use_container_width=True, hide_index=True)
+        series = cov.rename(columns=indicators).melt(
+            id_vars="CURSO", value_vars=list(indicators.values()),
+            var_name="Indicador", value_name="Cobertura",
+        ).sort_values("CURSO")
+        fig = bar(series, "CURSO", "Cobertura", "Cobertura por curso",
+                  "Curso académico", "Cobertura (%)", color="Indicador")
+        fig.update_layout(barmode="group")
+        fig.update_yaxes(range=[0, 100])
+        plot(fig)
         download_csv(cov, "upv_cobertura_por_curso.csv")
     if full is not None and not full.empty:
         full = numeric(full, ["COMPLETOS", "TOTAL", "COBERTURA_COMPLETA_PCT"])
         full = full.sort_values("CURSO")
         plot(bar(full, "CURSO", "COBERTURA_COMPLETA_PCT", "Cobertura simultánea de matrícula, movilidad entrante y saliente", "", "Cobertura (%)"))
-        st.dataframe(full, use_container_width=True, hide_index=True)
-    st.info("Estos porcentajes miden la disponibilidad entre las filas del dataset integrado de movilidad (159 por curso en la versión actual), no la cobertura de toda la oferta de titulaciones de la UPV. Un valor ausente no significa cero estudiantes.")
-
-st.divider()
-st.caption("Proyecto GPR · UPV · Datos públicos procesados con pandas. Revisar los indicadores y su cobertura antes de compararlos entre períodos o centros.")
